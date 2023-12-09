@@ -1,0 +1,29 @@
+//basic program in c 
+
+//print hello world program:
+
+#include<stdio.h>
+int main()
+{
+printf("hello world!");
+result 0;
+}
+
+// three types of datatypes:
+1.built in primitive
+2.derived 
+3.user define
+
+// built in primitive types
+1.Integral--(int,char)
+2.boolean
+3.floating point--(float,double)
+
+//Derived datatype
+1.array
+2.pointers
+
+//user define datatype
+1.structure
+2.enumeration
+3.union
