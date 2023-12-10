@@ -1,4 +1,4 @@
-//basic program in c 
+-->//basic program in c 
 
 //print hello world program:
 
@@ -9,26 +9,26 @@ printf("hello world!");
 result 0;
 }
 
-// three types of datatypes:
+-->// three types of datatypes:
 1.built in primitive
 2.derived 
 3.user define
 
-// built in primitive types
+-->// built in primitive types
 1.Integral--(int,char)
 2.boolean
 3.floating point--(float,double)
 
-//Derived datatype
+-->//Derived datatype
 1.array
 2.pointers
 
-//user define datatype
+-->//user define datatype
 1.structure
 2.enumeration
 3.union
 
-//variables and literals declaration  in c program 
+-->//variables and literals declaration  in c program 
 
 #include <stdio.h>
 int main() {
@@ -44,7 +44,7 @@ output:
  36 
  35.43
 
-//Aritmetic operation (+,-,*,/,%)
+-->Aritmetic operation (+,-,*,/,%)
 
 Addtion program
 #include <stdio.h>
@@ -76,6 +76,103 @@ Sum:113
 mul:1230
 div:12.30
 Mod:3
+
+
+-->ASSIGNMENT OPERATOR IN C(=,+=,-=,*=,/=,%=)
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+int main() {
+int a=10,b=5,c=7;
+//assignment operation
+a+=10;
+printf("\n A:%d",a);
+b-=10;
+printf("\n B:%d",b);
+c*=2;
+printf("\n C:%d",c);
+    return 0;
+}
+OUTPUT:
+A:20
+ B:-5
+ C:14
+
+-->RELATION OPERATOR(==,<,>,!=,<=,>=)
+Relational operators in C, such as “less than”, “greater than”, “less than or equal to”, “greater than or equal to”, “equal to”, and “not equal to”, play a pivotal role in comparing values.
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+int main() {
+int a=10,b=5;
+printf("\n grater than :%d", a>b);
+printf("\n less than :%d", a<b);
+printf("\n grater than or equal :%d", a>=b);
+printf("\n less than or equal :%d", a<=b);
+    return 0;
+}
+
+OUTPUT:
+
+grater than :1
+ less than :0
+ grater than or equal :1
+ less than or equal :0
+
+
+-->LOGICAL OPERATOR--(&&,||,!)
+1.&&--LOGICAL AND,
+2.||--LOGICAL ORT,
+3.! --LOGICAL NOT.
+
+--EXAMPLE CODE:
+#include <stdio.h>
+int main() {
+int a=76;
+printf("\n logical AND :%d",(a>=35 && a<=100));
+printf("\n logical OR :%d",(a>=35 || a<=100));
+printf("\n logical NOT :%d",!(a>=35));
+return 0;
+}
+
+OUTPUT:
+
+logical AND :1
+ logical OR :1
+ logical NOT :0
+
+-->increment and decrement operation 
+
+1.a++  --> post increment
+2.++a --> pre increment
+3.a-- --> post decrement
+4.--a  --> pre decrement
+
+EXAMPLE CODE
+#include <stdio.h>
+int main() {
+int a=1;
+printf("\n pre increment :%d",++a);
+printf("\n post increment :%d",a++);
+printf("\n A :%d",a);
+printf("\n pre decrement :%d",--a);
+printf("\n post decrement :%d",a--);
+printf("\n A :%d",a);
+return 0;
+}
+
+OUTPUT:
+
+pre increment :2
+ post increment :2
+ A :3
+ pre decrement :2
+ post decrement :2
+ A :1
+
+
 
 
 
