@@ -1,1 +1,106 @@
+practice program question
+1.Ramesh's basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.
 
+code:
+
+#include <stdio.h>
+int main() {
+float bs,da,hra,gs;
+printf("\n Enter basic salary:");
+scanf("%f",&bs);
+da=bs*0.4;
+hra=bs*0.2;
+gs=bs+da+hra;
+printf("\n print basic salary %f",bs);
+printf("\n DA %f",da);
+printf("\n HRA %f",hra);
+printf("\n GS %f",gs);
+  return 0;
+}
+
+output:
+Enter basic salary:8000
+print basic salary 8000.000000
+ DA 3200.000000
+ HRA 1600.000000
+ GS 12800.000000
+
+2. The distance between two cities (in km.) is input through the keyboard. Write a program to convert and print this distance in meters, feet, inches and centimeters
+
+
+code:
+
+#include <stdio.h>
+int main() {
+float km,m,cm,ft,inch;
+printf("\n enter the km:");
+scanf("%f",&km);
+m=km*1000;
+cm=m*100;
+inch=cm/2.54;
+ft=inch/12;
+printf("\n m:%f",m);
+printf("\n cm:%f",cm);
+printf("\n inch:%f",inch);
+printf("\n ft:%f",ft);
+return 0;
+}
+
+output:
+
+enter the km:45
+m:45000.000000
+ cm:4500000.000000
+ inch:1771653.500000
+ ft:147637.796875
+
+
+3. If the marks obtained by a student in five different subjects are input through the keyboard, find out the aggregate marks and percentage marks obtained by the student. Assume that the maximum marks that can be obtained by a student in each subject is 100
+
+code:
+
+
+#include <stdio.h>
+int main() {
+    float m1,m2,m3,m4,m5,total,avg;
+    printf("\n enter 5 marks:");
+    scanf("%f%f%f%f%f",&m1,&m2,&m3,&m4,&m5);
+    total=m1+m2+m3+m4+m5;
+    avg=total/5.0;
+    printf("\n enter the total mark: %f",total);
+    printf("\n enter the avg percentage: %f",avg);
+return 0;
+}
+
+output:
+enter 5 marks:78
+89
+98
+87
+88
+enter the total mark: 440.000000
+ enter the avg percentage: 88.000000
+
+4.Two numbers are input through the keyboard into two locations C and D. Write a program to interchange the contents of C and D.
+
+CODE:
+
+
+#include <stdio.h>
+int main() {
+    int c,d,b;
+    printf("\n enter c &d value:");
+    scanf("%d%d",&c,&d);
+    printf("\n C:%d  D: %d",c,d);
+    b=c;
+    c=d;
+    d=b;
+      printf("\n C:%d  D:  %d",c,d);
+return 0;
+}
+
+OUTPUT:
+enter c &d value:5
+6
+C:5  D: 6
+ C:6  D:  5     
