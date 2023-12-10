@@ -1,4 +1,4 @@
-practice program question
+"practice ARITHMETIC program question:"
 1.Ramesh's basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.
 
 code:
@@ -104,3 +104,65 @@ enter c &d value:5
 6
 C:5  D: 6
  C:6  D:  5     
+
+5.if a four-digit number is input through the keyboard, write a program obtain the sum of the first and last digit of this number in c program
+
+code:
+
+#include <stdio.h>
+int main() {
+    int a,b,c,d,e,f,g,h;
+    printf("\n enter the 4 digit number:");
+    scanf("%d",&a);//1234
+    b=a/10;//123
+    c=a%10;//4
+    d=b/10;//12
+    e=b%10;//3
+    f=d/10;//1
+    g=d%10;//2
+    h=c+f;
+    printf("\n result:%d",h);
+    return 0;
+}
+
+output:
+enter the 4 digit number:2937
+result:9
+
+6.In a town, the percentage of men is 52. The percentage of total literacy is 48If total percentage of literate men is 35 of the total population, write a program to find the total number of illiterate men and women if the population of the town is 80,000.
+
+CODE:
+
+#include <stdio.h>
+int main() {
+   int pop=80000;
+   int popmen,popwomen,totlit,totilit,menlit,womenlit,menilit,womenilit;
+   popmen=(52*pop)/100;
+   popwomen=pop-popmen;
+   totlit=(48*pop)/100;
+   totilit=pop-totlit;
+   menlit=(35*pop)/100;
+   womenlit=(13*pop)/100;
+   menilit=popmen-menlit;
+   womenilit=popwomen-womenlit;
+   printf("\n men pop:%d",popmen);
+   printf("\n women pop:%d",popwomen);
+    printf("\n total lit:%d",totlit);
+    printf("\n total ilit:%d",totilit);
+    printf("\n total menlit:%d",menlit);
+    printf("\n total womenlit:%d",womenlit);
+    printf("\n total menilit:%d",menilit);
+    printf("\n total womenilit:%d",womenilit);
+    return 0;
+}
+
+OUTPUT:
+
+men pop:41600
+ women pop:38400
+ total lit:38400
+ total ilit:41600
+ total menlit:28000
+ total womenlit:10400
+ total menilit:13600
+ total womenilit:28000
