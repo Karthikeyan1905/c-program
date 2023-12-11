@@ -481,6 +481,35 @@ two
 enter the value:5
 invalid number
 
+------------------------------------------------------------------
+
+3.CONDITIONAL STATEMENT:
+
+SYNTAX:
+condition?true statement:false statement;
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+
+int main() {
+  int a,b,c;
+  printf("\n enter the A and B value:");
+  scanf("%d%d",&a,&b);
+  c=a>b?a:b;
+  printf("\n the greatest number is:%d",c);
+    return 0;
+}
+
+OUTPUT:
+
+enter the A and B value:23
+12
+
+the greatest number is:23
+
+
+
 
 
 
