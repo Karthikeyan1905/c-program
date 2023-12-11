@@ -215,11 +215,17 @@ bitwise AND :9
 4.LOOP  STATEMENT-->( for, while, do while).
 5.GOTO  STATEMENT
 
---------------
+-------------------------
 
 1. IF  STATEMENT
 
 a) if condition(condition satisfy it will execute the code otherwise stop the execution).
+
+SYNTAX:
+if(condition)
+{
+statement;
+}
 
 
 EXAMPLE CODE:
@@ -245,7 +251,21 @@ enter your name:ram
 enter your age:25
 ram age is 25 so eligible for vote
 
+-----------------------------------------------------------
+
 b) if else condition
+
+SYNTAX:
+
+if(condition)
+{
+statement;
+}
+else
+{
+statement;
+}
+
 
 EXAMPLE CODE:
 
@@ -280,8 +300,23 @@ enter your name:krish
 enter your age:12
 krish age is 12 so not eligible for vote
 
+-----------------------------------------------------------------------------------
 
 c)else if ladder
+
+SYNTAX:
+if(condition)
+{
+statement;
+}
+elseif(condition)
+{
+statement;
+}
+else
+{
+statement;
+}
 
 EXAMPLE CODE:
 #include <stdio.h>
@@ -313,8 +348,19 @@ enter any value:12
 enter any value:0
 the given value is 0
 
+-------------------------------------------------------------------------
 
 D) nested if condition
+
+SYNTAX:
+
+if(condition)
+{
+if(condition)
+{
+statement;
+}
+}
 
 EXAMPLE CODE:
 
@@ -358,6 +404,91 @@ enter the year:2034
 
 enter the year:2000
 2000 is a leap year
+
+-----------------------------------------------------------------------------
+
+2.SWITCH STATEMENT
+
+SYNTAX:
+
+switch(choice)
+{
+case value:
+....
+break;
+case value:
+....
+break;
+default:
+....
+break;
+}
+
+(or)
+
+ switch( expression ) 
+{
+case value-1:
+Block-1; 
+Break; 
+case value-2: 
+Block-2; 
+Break; 
+case value-n:
+Block-n;
+Break;
+default:
+Block-1;
+Break; 
+} 
+Statement-x;
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+
+int main() {
+  int ch;
+  printf("\n enter the value:");
+  scanf("%d",&ch);
+  switch(ch)
+  {
+      case 1:
+      printf("\n One");
+      break;
+       case 2:
+      printf("\n two");
+      break;
+       case 3:
+      printf("\n three");
+      break;
+      default:
+      printf("\n invalid number");
+      break;
+  }
+
+    return 0;
+}
+
+OUTPUT:
+
+enter the value:1
+One
+
+enter the value:2
+two
+
+enter the value:5
+invalid number
+
+
+
+
+
+
+
+
+
 
 
 
