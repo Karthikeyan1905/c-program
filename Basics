@@ -172,6 +172,201 @@ pre increment :2
  post decrement :2
  A :1
 
+-->BITWISE OPERATOR(&,|,^,~,<<,>>)
+1.  &  -->  AND OPERATION
+2.  |  -->  OR 
+3.  ^  -->  XOR
+4.  ~  -->  NOT
+5.  <<  --> SHIFT LEFT
+6.  >>  --> SHIFT RIGHT
+
+EXAMPLE CODE:
+#include <stdio.h>
+int main()
+{
+int a=25,b=45,c,d,e;
+printf("\n bitwise AND :%d",a&b);
+printf("\n bitwise OR  :%d",a|b);
+printf("\n bitwise XOR :%d",a^b);
+printf("\n bitwise not :%d",~a);
+c=10;
+d=c<<2;
+e=c>>2;
+printf("\n left shift: %d",d);
+printf("\n right shift: %d",e);
+    return 0;
+}
+
+OUTPUT:
+
+bitwise AND :9
+ bitwise OR  :61
+ bitwise XOR :52
+ bitwise not :-26
+ left shift: 40
+ right shift: 2
+
+----------------------------------------
+
+-->CONTROL STATEMENT 
+1. IF  STATEMENT-->( if, if else, else if ladder, nested if).
+2.SWITCH STATEMENT
+3.CONDITIONAL OPERATOR STATEMENT
+4.LOOP  STATEMENT-->( for, while, do while).
+5.GOTO  STATEMENT
+
+--------------
+
+1. IF  STATEMENT
+
+a) if condition(condition satisfy it will execute the code otherwise stop the execution).
+
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+int main()
+{
+char name[10];
+int age;
+printf("\n enter your name:");
+scanf("%s",name);
+printf("\n enter your age:");
+scanf("%d",&age);
+if(age>=18)
+{
+    printf("\n %s age is %d so eligible for vote",name,age);
+}
+    return 0;
+}
+
+OUTPUT:
+enter your name:ram
+enter your age:25
+ram age is 25 so eligible for vote
+
+b) if else condition
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+int main()
+{
+char name[10];
+int age;
+printf("\n enter your name:");
+scanf("%s",name);
+printf("\n enter your age:");
+scanf("%d",&age);
+if(age>=18)
+{
+    printf("\n %s age is %d so eligible for vote",name,age);
+}
+else
+{
+    printf("\n %s age is %d so not eligible for vote",name,age);
+}
+    return 0;
+}
+
+OUTPUT:
+//if :
+enter your name:krish
+enter your age:45
+krish age is 45 so eligible for vote
+
+//else:
+enter your name:krish
+enter your age:12
+krish age is 12 so not eligible for vote
+
+
+c)else if ladder
+
+EXAMPLE CODE:
+#include <stdio.h>
+int main()
+{
+int a;
+printf("\n enter any value:");
+scanf("%d",&a);
+if(a<0)
+{
+    printf("\n %d is a negative value.", a);
+}
+else if (a==0)
+{
+    printf("\n the given value is 0");
+}
+else if(a>0)
+{
+ printf("\n %d is a positive value.", a);    
+}
+    return 0;
+}
+
+OUTPUT:
+
+enter any value:12
+12 is a positive value.
+
+enter any value:0
+the given value is 0
+
+
+D) nested if condition
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+
+int main() {
+   int year;
+   printf("\n enter the year:");
+   scanf("%d",&year);
+   if(year%100==0)
+   {
+       if(year%400==0)
+       {
+           printf("\n %d is a leap year",year);
+       }
+       else
+       {
+            printf("\n %d is a not leap year",year);
+       }
+   }
+       else
+       {
+       if(year%4==0)
+       {
+            printf("\n %d is a leap year",year);
+       }
+       else
+       {
+            printf("\n %d is a not leap year",year);
+       }
+   }
+      
+   
+
+    return 0;
+}
+
+OUTPUT:
+enter the year:2034
+2034 is a not leap year
+
+enter the year:2000
+2000 is a leap year
+
+
+
+
+
+
+
+
+
 
 
 
