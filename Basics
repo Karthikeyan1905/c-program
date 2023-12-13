@@ -508,6 +508,37 @@ enter the A and B value:23
 
 the greatest number is:23
 
+-------------------------------------------------------------------
+
+GOTO LABEL STATEMENT IN C
+
+-->goto label sample program
+
+#include <stdio.h>
+
+int main() {
+    int i=0;
+    run:
+    printf("\n %d",i);
+    i++;
+    if(i!=5)
+    {
+        goto run;
+    }
+printf("\n end ");
+    return 0;
+}
+
+OUTPUT:
+
+0
+ 1
+ 2
+ 3
+ 4
+ end
+--------------------------------------------------------------------
+
 
 
 
