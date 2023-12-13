@@ -245,4 +245,157 @@ total mark:236
  result: fail
  grade: no grade
 
+8.A library charges a fine for every book returned late.
+For first 5 days the fine is 50 paise,
+for 6-10 days fine is one rupee and
+above 10 days fine is 5 rupees.
+If you return the book after 30 days your membership will be canceled.
+Write a program to accept the number of days the member is late to return the book and display the fine or the appropriate message.
 
+code:
+
+#include <stdio.h>
+
+int main() {
+    int days;
+    printf("\n enter the days:");
+    scanf("%d",&days);
+    if(days>=1 && days<=5)
+    {
+        printf("\n your fine amount is 0.5 paise");
+    }
+    else if(days>=6 && days<=10)
+    {
+        printf("\n your fine amount is 1 paise");
+    }
+     else if(days>=11 && days<=30)
+    {
+        printf("\n your fine amount is 5 paise");
+    }
+      else
+    {
+        printf("\n your membership will be cancelled");
+    }
+    return 0;
+}
+
+OUTPUT:
+
+enter the days:1
+your fine amount is 0.5 paise
+
+enter the days:6
+your fine amount is 1 paise
+
+enter the days:11
+your fine amount is 5 paise
+
+enter the days:31
+your membership will be cancelled
+
+9. Any integer is input through the keyboard. write a program to find out whether it is an odd number or even number.
+
+
+
+CODE:
+
+#include <stdio.h>
+
+int main() {
+int num;
+printf("\n enter any value:");
+scanf("%d",&num);
+if(num%2==0)
+{
+    printf("\n the number is even");
+}
+else 
+{
+    printf("\n the number is odd");
+}
+    return 0;
+}
+
+OUTPUT:
+
+enter any value:5255
+the number is odd
+
+10.Write a program to find the given character is vowel or not using switch statement.
+
+CODE:
+
+#include <stdio.h>
+
+int main() {
+char c;
+printf("\n enter the character:");
+scanf("%c",&c);
+switch(c)
+{
+case'a':
+case'e':
+case'i':
+case'o':
+case'u':
+case'A':
+case'E':
+case'I':
+case'O':
+case'U':
+printf("\n %c is a vowel",c);
+default:
+break;
+printf("\n %c is not a vowel",c);
+break;
+}
+    return 0;
+}
+
+OUTPUT:
+
+enter the character:f
+f is not a vowel
+
+enter the character:i
+i is a vowel
+
+
+11. Thre digit number input through the keyboard write a program to find the given number is Armstrong or not.
+
+EXAMPLE:
+
+#include <stdio.h>
+
+int main() {
+int n,a,d1,d2,d3;
+printf("\n enter three digit number:");
+scanf("%d",&n);//153
+d3=n%10;//3
+a=n/10;//15
+d2=a%10;//5
+d1=a/10;//1
+a=(d1*d1*d1)+(d2*d2*d2)+(d3*d3*d3);
+if(a==n)
+{
+    printf("\n %d is armstrong number",n);
+}
+else
+{
+    printf("\n %d is  not armstrong number",n);
+}
+
+    return 0;
+}
+
+
+OUTPUT:
+
+enter three digit number:153
+153  is armstrong number
+
+enter three digit number:125
+125 is  not armstrong number
+
+enter three digit number:125
+125 is  not armstrong number
