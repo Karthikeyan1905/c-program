@@ -399,3 +399,74 @@ enter three digit number:125
 
 enter three digit number:125
 125 is  not armstrong number
+
+12.Write a program for the following output using switch case
+MENU CARD
+1. COFFEE
+2.TEA
+3.COLD COFFEE
+4.MILK SHAKE
+
+Enter Your choice2
+You have selected Tea
+Enter the quantity 15
+Total amount :50
+
+CODE:
+
+#include <stdio.h>
+
+int main() {
+    int ch,qty;
+    printf("\n menu card:");
+    printf("\n\t\t 1.coffee        rs.15");
+    printf("\n\t\t 2.tea           rs.10");
+    printf("\n\t\t 3.cold coffee   rs.25");
+    printf("\n\t\t 4.milk shake    rs.50");
+    printf("\nenter your choice:");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
+    printf("\n you have selected coffee");
+    printf("\n Enter the quantity:");
+    scanf("%d",&qty);
+    printf("\n total amount:%d",(qty)*15);
+    break;
+      case 2:
+    printf("\n you have selected tea");
+    printf("\n Enter the quantity:");
+    scanf("%d",&qty);
+    printf("\n total amount:%d",(qty)*10);
+    break;
+      case 3:
+    printf("\n you have selected cold coffee ");
+    printf("\n Enter the quantity:");
+    scanf("%d",&qty);
+    printf("\n total amount:%d",(qty)*25);
+    break;
+      case 4:
+    printf("\n you have selected milk shake ");
+    printf("\n Enter the quantity:");
+    scanf("%d",&qty);
+    printf("\n total amount:%d",(qty)*50);
+    break;
+    defaut:
+    printf("\n invalid enter the above number(1,2,3,4):");
+    break;
+    return 0;
+    }
+}
+
+OUTPUT:
+
+menu card:
+		 1.coffee        rs.15
+		 2.tea           rs.10
+		 3.cold coffee   rs.25
+		 4.milk shake    rs.50
+enter your choice:1
+you have selected coffee
+ Enter the quantity:5
+ total amount:75
+
