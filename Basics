@@ -539,7 +539,84 @@ OUTPUT:
  end
 --------------------------------------------------------------------
 
+example for goto label
 
+#include <stdio.h>
+
+int main() {
+    int ch,qty,i, net=0;
+    run:
+    printf("\n menu card:");
+    printf("\n\t\t 1.coffee        rs.15");
+    printf("\n\t\t 2.tea           rs.10");
+    printf("\n\t\t 3.cold coffee   rs.25");
+    printf("\n\t\t 4.milk shake    rs.50");
+    printf("\nenter your choice:");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
+    printf("\n you have selected coffee");
+    printf("\n Enter the quantity:");
+    scanf("%d",&qty);
+    net=net+(qty*15);
+    break;
+      case 2:
+    printf("\n you have selected tea");
+    printf("\n Enter the quantity:");
+    scanf("%d",&qty);
+   net=net+(qty*10);
+    break;
+      case 3:
+    printf("\n you have selected cold coffee ");
+    printf("\n Enter the quantity:");
+    scanf("%d",&qty);
+     net=net+(qty*25);
+    break;
+      case 4:
+    printf("\n you have selected milk shake ");
+    printf("\n Enter the quantity:");
+    scanf("%d",&qty);
+    net=net+(qty*50);
+    break;
+    defaut:
+    printf("\n invalid enter the above number(1,2,3,4):");
+    break;
+    }
+    printf("\n do you want to continue press 1:");
+    scanf("%d",&i);
+    if(i==1)
+    {
+        goto run;
+    }
+    printf("\n total amount:%d",net);
+    printf("\n thank you for coming");
+    return 0;
+    }
+
+
+ OUTPUT:
+
+menu card:
+		 1.coffee        rs.15
+		 2.tea           rs.10
+		 3.cold coffee   rs.25
+		 4.milk shake    rs.50
+enter your choice:3
+you have selected cold coffee 
+ Enter the quantity:2
+ do you want to continue press 1:1
+ menu card:
+		 1.coffee        rs.15
+		 2.tea           rs.10
+		 3.cold coffee   rs.25
+		 4.milk shake    rs.50
+enter your choice:2
+you have selected tea
+ Enter the quantity:3
+ do you want to continue press 1:0
+ total amount:80
+ thank you for coming
 
 
 
