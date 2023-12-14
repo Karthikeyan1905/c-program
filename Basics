@@ -824,6 +824,41 @@ OUTPUT:
 
 
 -->ARRAYS IN C PROGRAM
+type 
+1.one dimension 
+2.two dimention 
+
+
+EXAMPLE CODE FOR ONE DIMENSION ARRAY:
+
+#include <stdio.h>
+
+int main() {
+   int i,a[100],n;
+   printf("\n enter the limit:");
+   scanf("%d",&n);
+   for(i=0;i<n;i++)
+   {
+       printf("\n enter the value:");
+       scanf("%d",&a[i]);
+   }
+    for(i=0;i<n;i++)
+    {
+   printf("\n %d",a[i]);
+    }
+    return 0;
+}
+
+OUTPUT:
+
+enter the limit:3
+enter the value:10
+enter the value:20
+enter the value:30
+10
+ 20
+ 30
+
 
 
 
