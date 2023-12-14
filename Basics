@@ -619,6 +619,212 @@ you have selected tea
  thank you for coming
 
 
+-----------------------------------------------------------------------
+
+-->LOOPING STATEMENT
+1.ENTRY CHECK LOOP
+     WHILE
+     FOR
+2.EXIT CHECK LOOP
+      DO WHILE
+---------------------------------------------------
+
+--> WHILE LOOP 
+SYNTAX:
+while(condition)
+{
+statement();
+}
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+
+int main() {
+    int i=1,n;
+    printf("\n enter the limit:");
+    scanf("%d",&n);
+    while(i<=n)
+    {
+        printf("\n%d",i);
+        i++;
+    }
+    return 0;
+}
+
+OUTPUT:
+
+enter the limit:3
+1
+2
+3
+
+------------------------------------------------------------
+
+-->DO WHILE LOOP
+
+SYNTAX:
+do
+{
+statement();
+}
+while(condition)
+{
+statement();
+}
+
+EXAMPLE CODE:
+#include <stdio.h>
+
+int main() {
+    int i=0,n;
+    printf("\n enter the limit:");
+    scanf("%d",&n);
+    do{
+        printf("\n%d",i);
+        i+=2;
+    }
+    while(i<=n);
+    return 0;
+}
+
+OUTPUT:
+
+enter the limit:20
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+----------------------------------------------------------
+
+--> FOR LOOP 
+
+SYNTAX:
+
+for(initialization;condition;increment)
+{
+statement();
+}
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+
+int main() {
+    int i,n;
+    printf("\n enter the limit:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i+=2)
+    {
+        printf("\n%d",i);
+    }
+    return 0;
+}
+
+OUTPUT:
+
+enter the limit:10
+1
+3
+5
+7
+9
+----------------------------------------
+
+--> NESTED FOR LOOP( is used to draw pattern )
+
+
+EXAMPLE CODE:
+
+#include <stdio.h>
+
+int main() {
+    int i,j;
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+OUTPUT:
+
+*****
+*****
+*****
+*****
+*****
+
+ANOTHER EXAPMLE FOR NESTED LOOP
+
+CODE:
+#include <stdio.h>
+
+int main() {
+    int i,j;
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+OUTPUT:
+
+*
+**
+***
+****
+
+
+-----------------------------------------
+BREAK AND CONTINUE IN C PROGRAM
+
+EXAMPLE CODE:
+#include <stdio.h>
+
+int main() {
+    int i;
+    for(i=1;i<=10;i++)
+    {
+          if(i==8)
+            break;
+            if(i==3)
+            continue;
+        printf("\n %d",i);
+        
+    }
+    return 0;
+}
+OUTPUT:
+
+1
+ 2
+ 4
+ 5
+ 6
+ 7
+
+------------------------------------------
+
+
+-->ARRAYS IN C PROGRAM
+
 
 
 
