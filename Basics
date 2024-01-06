@@ -951,32 +951,212 @@ int main() {
 }
 
 OUTPUT:
-enter the char:karthi keyan // THERE IS A SPACE B/W THE KARTHI KEYAN IF YOU GIVE SCANF MEANS I WILL NOT PRINT THE KEYAN  //
+enter the char:karthi keyan // THERE IS A SPACE B/W THE KARTHI KEYAN IF YOU GIVE SCANF MEANS IT WILL NOT PRINT THE KEYAN  gets(c) IS USED TO PRINT AFTER THE SPACE  //
 karthi keyan
 
 ------------------------------------------------
 
 #include<stdio.h>
 #include<string.h>
+ 
 int main()
 {
-char c[20],a[20];
-char x[10]={'r','a','m','\0'};
-char y[10]={'k','u','m','a','r','\0'};
-printf("\n enter the string:");
-scanf("%s",c);
-
-printf("\n length :%d",strlen(c));//ram --> out :3
-printf("\n compare :%s",strcmp(x,c));//  both are same output will be '0' otherwise output is -"1 or 1"
-printf("\n reverse :%s",strrev(c));//mar
-printf("\n uppercase:%s",strupr(c));//MAR
-printf("\n lowercase:%s",strlwr(c));//mar
-printf("\n copy:%s",strcpy(a,c));// mar
-strcat(x,y);
-printf("\n concatenation:%s",x);//ram kumar
-return 0;
+    char c[20],a[20];
+    char x[10]={'R','A','M','\0'};
+    char y[10]={'K','U','M','A','R','\0'};
+    printf("x : %s",x);
+    printf("\nEnter The String : ");
+    gets(c);
+ 
+    printf("\nCompare   : %d ",strcmp(x,c));//String Compare
+    printf("\nLength    : %d ",strlen(c));//String Length
+    printf("\nReverse   : %s ",strrev(c));//String Reverse
+    printf("\nUppercase : %s ",strupr(c));//String Upper
+    printf("\nLowercase : %s ",strlwr(c));//String Lower
+    printf("\nCopy      : %s ",strcpy(a,c));//String Copy
+    strcat(x,y);
+    printf("\nConcatenation : %s ",x);//String Concatenation
+    return 0;
 }
+
+Output
+x : RAM
+Enter The String : sam
+
+Compare   : -1
+Length    : 3
+Reverse   : mas
+Uppercase : MAS
+Lowercase : mas
+Copy      : mas
+Concatenation : RAMKUMAR
 ----------------------------------------------------------------------------------
+
+
+MATH FUNCTION IN C PROGRAM
+
+#include<stdio.h>
+#include<math.h>
+ 
+int main()
+{
+ 
+    printf("\nSQRT  : %0.2f",sqrt(4));
+    printf("\nPOW   : %0.2f",pow(2,3));
+    printf("\nabs   : %d",abs(-25));
+    printf("\nCEIL  : %f",ceil(3.8));
+    printf("\nCEIL  : %f",ceil(3.2));
+    printf("\nFLOOR : %f",floor(3.8));
+    printf("\nFLOOR : %f",floor(3.2));
+    printf("\nROUND : %f",round(3.8));
+    printf("\nROUND : %f",round(3.2));
+    return 0;
+}
+ 
+
+Output:
+
+SQRT  : 2.00
+POW   : 8.00
+abs   : 25
+CEIL  : 4.000000
+CEIL  : 4.000000
+FLOOR : 3.000000
+FLOOR : 3.000000
+ROUND : 4.000000
+ROUND : 3.000000
+-------------------------------------------------------------------------------
+
+FUNCTION IN C PROGRAM:
+
+TWO TYPES :
+1.BUILTIN FUNCTION 
+
+2.USER DEFINE FUNCTION
+  A)call by value(return type (data type))
+  B)call by reference(not return(void))
+
+Different aspects of function calling:
+
+function without arguments and without return value
+
+function without arguments and with return value
+
+function with arguments and without return value
+
+function with arguments and with return value
+
+three function in program
+1.function declaration 
+2,function definition
+3.function calling
+-----------------------------------------------------------
+//example code for no return without argument function
+
+//No Return Without Argument Function in C
+
+#include<stdio.h>
+ 
+//Function Declaration
+void add();
+ 
+int main()
+{
+    //Function Calling
+    add();
+    return 0;
+}
+//Function Definition
+void add()
+{
+    int a,b,c;
+    printf("\nEnter The Value of A & B :");
+    scanf("%d%d",&a,&b);
+    c=a+b;
+    printf("\nTotal : %d",c);
+}
+
+OUTPUT:
+enter two value a&b:10
+20
+c value is :30
+
+--------------------------------------------------------------
+
+//No Return With Argument Function in C
+#include<stdio.h>
+
+void add(int,int);
+int main()
+{
+ add(25,35);//actual parameter
+ 
+ return 0;
+}
+void add(int a,int b) //formal parameter
+{
+  int c;
+    c=a+b;
+    printf("\n c value is :%d",c);
+}
+
+OUTPUT
+c value is :60
+--------------------------------------------------------------------------------
+// Return Without Argument Function in C
+#include<stdio.h>
+
+int add();
+int main()
+{
+ int a;
+ a=add();//actual parameter
+ printf("\n total:%d",a);
+ return 0;
+}
+int add() //formal parameter
+{
+  int a,b;
+  printf("\n enter the a and b value:");
+  scanf("%d%d",&a,&b);
+  return a+b;
+    
+}
+
+OUTPUT:
+enter the a and b value:10
+20
+total:10
+--------------------------------------------------------
+
+// Return With Argument Function in C
+#include<stdio.h>
+
+int add(int,int);
+int main()
+{
+    int a,b;
+    printf("\n enter the a and b value:");
+    scanf("%d%d",&a,&b);
+    a=add(a,b);
+    printf("\n total:%d",a);
+    return 0;
+    }
+ int add(int a,int b)
+    {
+    return a+b;
+}
+
+OUTPUT:
+enter the a and b value:10
+20
+total:30
+---------------------------------------------------------------------
+
+
+
+
+
 
 
 
