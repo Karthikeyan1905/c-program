@@ -1153,25 +1153,220 @@ enter the a and b value:10
 total:30
 ---------------------------------------------------------------------
 
+ Recursive Function in C :
+In C programming, a recursion function is a function that calls itself. A function that calls itself is known as a recursive function.
+Recursion is a technique in which a function calls itself, either directly or indirectly, in order to solve a problem.
+
+code:
+#include<stdio.h>
+/*
+    5!
+    1*2*3*4*5
+*/
+ 
+int factorial(int i) //5
+{
+    if(i<=1){
+        return 1;
+    }
+    return i*factorial(i-1);  //5*4*3*2*1
+}
+ 
+int main()
+{
+    printf("Factorial : %d",factorial(5));
+    return 0;
+}
+ 
+
+Output
+Factorial : 120
+-------------------------------------------------------------------------
+Call by Reference Function in C:
+
+In C programming, call by reference is a method of passing arguments to a function where the function receives the memory address of the variables passed as arguments, rather than their values. 
 
 
+code:
+#include<stdio.h>
+ 
+void swap(int *x,int *y)
+{
+   int temp;
+   temp=*x;
+   *x=*y;
+   *y=temp;
+}
+ 
+int main()
+{
+    int a,b;
+    printf("\nEnter The Value of A & B : ");
+    scanf("%d%d",&a,&b);
+    printf("\nBefore Swap  A : %d   | B : %d",a,b);
+    swap(&a,&b);
+    printf("\nAfter  Swap  A : %d   | B : %d",a,b);
+    return 0;
+}
+ 
+
+Output
+Enter The Value of A & B : 10
+20
+
+Before Swap  A : 10   | B : 20
+After  Swap  A : 20   | B : 10
+
+--------------------------------------------------------------
+Local Variables in C :
+In C programming, a local variable is a variable that is declared within a function or a block of code. 
+Local variables are only accessible within the scope of the function or block in which they are declared, and they are not visible to other parts of the program.
+
+code:
+#include<stdio.h>
+ 
+int add()
+{
+    int a,b;
+}
+ 
+int main()
+{
+    for(int i=0;i<5;i++)
+    {
+        printf("\n%d",i);
+    }
+     //printf("\n%d",i);
+    return 0;
+}
+ 
+
+Output
+0
+1
+2
+3
+4
+
+---------------------------------------------------------------
+Global Variables in C :
+In C programming, a global variable is a variable that is declared outside of any function or block of code. 
+
+code:
+#include<stdio.h>
+ 
+void display();
+ 
+int a=10;
+ 
+int main()
+{
+    printf("\n Value of A : %d",a);
+    display();
+    return 0;
+}
+ 
+void display()
+{
+    a++;
+    printf("\n Value of A : %d",a);
+}
+ 
+
+Output
+ Value of A : 10
+ Value of A : 11
+-----------------------------------------------------------------------------------
+
+Static Variables in C 
+
+ 
+#include<stdio.h>
+ 
+void display();
+ 
+ 
+int main()
+{
+    display();
+    display();
+    display();
+}
+ 
+void display()
+{
+    static int x=1;//static is uses to incremented the value x if static will no use x value does not increment.
+    x++;
+    printf("\nx : %d",x);
+}
+ 
+
+Output
+x : 2
+x : 3
+x : 4
+---------------------------------------------------------------------------------------
+
+Enumeration or enum in C:
+In C programming, an enumeration or enum is a user-defined data type that consists of a set of named values
 
 
+code:
 
+#include<stdio.h>
+enum Bool{No=10,Yes=20};
+int main()
+{
+    enum point {x=25,y};
+    enum Bool a;
+    enum point b;
+    a=Yes;
+    b=y;
+    printf("\na : %d",a);
+    printf("\nb : %d",b);
+ 
+   return 0;
+}
+ 
 
+Output
+a : 20
+b : 26
+-------------------------------------------------
+Single Pointers in C:
 
+A pointer in C is a variable that holds the memory address of another variable.
+A single pointer, also known as a "regular" pointer, can hold the memory address of a single variable.
+                     -----------------
+The basic syntax for declaring a pointer in C is as follows:
 
+           data_type *pointer_name;
 
+code:
 
-
-
-
-
-
-
-
-
-
+#include<stdio.h>
+int main()
+{
+    int a=10,*p;
+    p=&a; //Address of a
+ 
+    printf("\n Value of  A           : %d",a);
+    printf("\n Address of  A         : %d",&a);
+    printf("\n Value of  P           : %d",p);
+    printf("\n Address of  P         : %d",&p);
+    printf("\n P Dereferencing       : %d",*p);
+ 
+    return 0;
+}
+ 
+To download raw file Click Here
+Output
+ Value of  A           : 10
+ Address of  A         : 6356732
+ Value of  P           : 6356732
+ Address of  P         : 6356728
+ P Dereferencing       : 10
+---------------------------------------------------------
 
 
 
