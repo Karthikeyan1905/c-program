@@ -1333,6 +1333,13 @@ Output
 a : 20
 b : 26
 -------------------------------------------------
+pointers in c:
+
+two type of variable;
+1.data type
+2.pointer variable
+-------------------------------------
+
 Single Pointers in C:
 
 A pointer in C is a variable that holds the memory address of another variable.
@@ -1367,6 +1374,48 @@ Output
  Address of  P         : 6356728
  P Dereferencing       : 10
 ---------------------------------------------------------
+
+Double pointer in c:
+
+code:
+
+#include <stdio.h>
+
+int main() {
+   int a=10,*p;
+   p=&a;
+   int **q;
+   printf( "\n value of A :%d",a);
+   printf( "\n Address of A :%d",&a);
+   printf( "\n value of p :%d",p);
+   printf( "\n Address of p :%d",&p);
+   printf( "\n P dereference of p :%d",*p);
+   printf("\n -----------------------------------");
+      q=&p;
+   printf( "\n value of p :%d",p);
+   printf( "\n Address of p :%d",&p);
+   printf( "\n value of q :%d",q);
+   printf( "\n Address of q :%d",&q);
+   printf( "\n q dereference of q :%d",**q);
+    return 0;
+}
+
+output:
+
+ value of A :10
+ Address of A :128194924
+ value of p :128194924
+ Address of p :128194912
+ P dereference of p :10
+ ----------------------
+ value of p :128194924
+ Address of p :128194912
+ value of q :128194912
+ Address of q :128194904
+ q dereference of q :10
+
+------------------------------------------------------------------------------
+
 
 
 
