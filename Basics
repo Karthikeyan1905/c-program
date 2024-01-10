@@ -1416,9 +1416,70 @@ output:
 
 ------------------------------------------------------------------------------
 
+pointer aritmentic in c :
 
+code:
+#include <stdio.h>
 
+int main() {
+   int a=10,*p,*r;
+   p=&a;
+   r=p+1;
+   printf("\n size of integer:%d",sizeof(a));
+  printf("\n value of p:%d",p);
+   printf("\n value of r:%d",r);
+    return 0;
+}
+output:
 
+size of integer:4
+value of p:915289132
+value of r:915289136
+
+---------------------------------------------------------------------------------
+ARRAY VALUES WITH POINTERIN C:
+HOW TO HANDLE ARRAY VALUE IN C PROGRAM:
+
+#include <stdio.h>
+
+int main() {
+   int a[]={10,20,30,40,50};
+   int *p;
+   p=&a;
+   printf("\n size of integer:%d",sizeof(int));
+   printf("\n size of a:%d",sizeof(a));
+   printf("\n length of a:%d",sizeof(a)/sizeof(int));
+   printf("\n address of a :%d",&a);
+   printf("\n value of p:%d",p);
+   printf("\n dereference of p:%d",*p);
+    printf("\n-----------------------------------");
+   p++;
+    printf("\n value of p :%d",&p);
+   printf("\n value of *p:%d",*p);
+   printf("\n-----------------------------------");
+  printf("\n value of *++p :%d",*++p);
+   printf("\n value of ++*p:%d",++*p);
+    return 0;
+}
+
+OUTPUT:
+
+size of integer:4
+ size of a:20
+ length of a:5
+ address of a :-104187280
+ value of p:-104187280
+ dereference of p:10
+-----------------------------------
+ value of p :-104187288
+ value of *p:20
+-----------------------------------
+ value of *++p :30
+ value of ++*p:31
+
+------------------------------------------------------------------------
+
+GENERIC POINTER (OR) VOID POINTER IN C:
 
 
 
