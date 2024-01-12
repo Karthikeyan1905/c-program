@@ -1480,6 +1480,167 @@ size of integer:4
 ------------------------------------------------------------------------
 
 GENERIC POINTER (OR) VOID POINTER IN C:
+In C programming, a void pointer, also known as a generic pointer, is a pointer that can point to any type of data. It is declared using the void * data type.
+
+code:
+
+#include <stdio.h>
+
+int main() {
+    int a[]={10,20,30};
+    void *p;
+    p=a;
+    printf("\n *p:%d",*(int *)p);
+
+    return 0;
+}
+OUTPUT:
+
+*p:10
+---------------------------------------------------------------------------
+
+MALLOC FUNCTION IN C:
+In C programming, the malloc() function is used to dynamically allocate memory during runtime. 
+It is defined in the stdlib.h library and is used to allocate a block of memory of a specified size. The size of the memory block is specified in bytes.
+#include <stdio.h>
+#include<stdlib.h>
+int main() {
+    int i,n;
+    printf("\n enter the limit: ");
+    scanf("%d",&n);
+    int *ptr=(int *)malloc(n*sizeof(int));
+    
+    if (ptr==NULL)
+    {
+        printf("\n memory not available");
+        exit(1);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("\n enter the value:");
+        scanf("%d",ptr+i);
+    }
+     for(i=0;i<n;i++)
+     {
+         printf("\n %d",*(ptr+i));
+     }
+    return 0;
+}
+
+OUTPUT:
+enter the limit: 3
+enter the value:10
+enter the value:20
+enter the value:30
+10
+ 20
+ 30
+-------------------------------------------------------------------------------------------
+calloc() Function in c:
+
+In C programming, the calloc() function is used to dynamically allocate memory for an array during runtime, similar to the malloc() function.
+
+code:
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    //void* calloc(size_t n,size_t size)
+ 
+    int i,n;
+    printf("\nEnter The Limit : ");
+    scanf("%d",&n);
+    int *ptr=(int *)calloc(n,sizeof(int));
+ 
+    if(ptr==NULL)
+    {
+        printf("Memory Not Available ...");
+        exit(1);
+    }
+ 
+    for(i=0; i<n; i++)
+    {
+        printf("Enter a integer : ");
+        scanf("%d",ptr+i);
+    }
+ 
+    for(i=0; i<n; i++)
+    {
+        printf("\n%d :  %d  ",&ptr+i,*(ptr+i));
+    }
+ 
+    return 0;
+}
+
+OUTPUT:
+Enter The Limit : 5
+Enter a integer : 1
+Enter a integer : 2
+Enter a integer : 3
+Enter a integer : 4
+Enter a integer : 5
+
+6356724 :  1
+6356728 :  2
+6356732 :  3
+6356736 :  4
+6356740 :  5
+------------------------------------------------------
+Realloc Function in C:
+he realloc function in C is used to dynamically change the size of a previously allocated memory block. 
+The function takes two arguments: a pointer to the previously allocated memory block and the new size of the memory block. 
+
+CODE:
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    //void * realloc(void *ptr,size_t new_size)
+    int i;
+    int *ptr=(int *) malloc(3*sizeof(int));
+ 
+    if(ptr==NULL)
+    {
+        printf("Memory Not Available ...");
+        exit(1);
+    }
+ 
+    printf("\nEnter 3 Nos : \n");
+    for(i=0; i<3; i++)
+    {
+        scanf("%d",ptr+i);
+    }
+ 
+    ptr=(int *) realloc(ptr,5*sizeof(int));
+    for(i=3; i<5; i++)
+    {
+        scanf("%d",ptr+i);
+    }
+ 
+    for(i=0; i<5; i++)
+    {
+        printf("%d  ",*(ptr+i));
+    }
+    return 0;
+}
+ 
+ 
+Output:
+Enter 3 Nos :
+1
+2
+3
+4
+5
+1  2  3  4  5
+-----------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
