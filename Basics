@@ -1635,7 +1635,63 @@ Enter 3 Nos :
 5
 1  2  3  4  5
 -----------------------------------------------------------------------------------
+NULL POINTER IN C:
 
+*) A NULL pointer is a pointer that does not point to any memory address
+*) NULL when we assign to a pointer its become NULL pointer.
+
+eg:
+int main()
+{
+int*p=NULL;
+return 0;
+}
+
+USES:
+*) It uses to initialize a pointer has no valid address.
+*)it useful for handling errors using malloc,calloc,realloc funcitons.
+------------------------------------------------------------------------------------------
+
+FREE FUNCTION IN C:
+The free function in C is used to deallocate memory that was previously allocated by malloc, calloc, or realloc. 
+It takes as an argument a pointer to the memory that needs to be freed.
+Once the memory has been freed, the pointer should not be used again as it may cause undefined behavior
+
+#include <stdio.h>
+#include<stdlib.h>
+int *getting_values()
+{
+    int i;
+    int *ptr=(int*)malloc(3*sizeof(int));
+    for(i=0;i<3;i++)
+    {
+        printf("\n enter the value:");
+        scanf("%d",ptr+i);
+        
+    }
+    return ptr;
+    
+}
+int main() {
+   int i,n=0;
+   int *ptr=getting_values();
+   for (i=0;i<3;i++)
+   
+{
+    n+=*(ptr+i);
+}
+printf("total:%d",n);
+free(ptr);
+ptr=NULL;
+    return 0;
+}
+
+output:
+enter the value:10
+enter the value:20
+enter the value:30
+total:60
+-----------------------------------------------------------------------
 
 
 
